@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="assets/images/invoice.png" alt="invoice">
+    </div>
+    <!-- Text Container -->
+    <div class="text-container" id="invoiceContainer"></div>
+
+    <!-- Items Container -->
+     <div class="items-container"></div>
+
+     <script>
+        // Retrieve data from sessionStorage
+        const booker = sessionStorage.getItem("booker");
+        const shop = sessionStorage.getItem("shop");
+        const phone = sessionStorage.getItem("phone");
+        const date = sessionStorage.getItem("date");
+
+        // Fill the invoice container with the data
+        const textContainerClassFillData = `
+            <small class="booker-name">${booker}</small>
+            <small class="shop-name">${shop}</small>
+            <small class="ph">${phone}</small>
+            <small class="invoice-date">${date}</small>
+        `;
+
+        // Inject the filled data into the invoice container
+        document.getElementById("invoiceContainer").innerHTML = textContainerClassFillData;
+    </script>
+
+     <script src="assets/script/script.js"></script>
+</body>
+</html>
