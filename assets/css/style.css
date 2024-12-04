@@ -34,46 +34,29 @@
     left: 405px;
 }
 
-.item-one,
-.item-two,
-.item-three,
-.item-four,
-.item-five,
-.item-six,
-.item-seven{
-    top: 177.5px;
-    left: 190px;
+.items-container > div, .grand-total{
+    position: relative;
+    left: 50px;
+    top: 174px;
+    width: 823px;
+    height: 20px;
 }
 
-.item-three, .item-four{
-    top: 179.5px;
+.grand-total{
+    position: relative;
+    width: fit-content !important;
+    left: 820px !important;
 }
 
-.items-container > .item-one > small{
-    margin-right: 215px;
+.items-container > div > span:nth-of-type(1){
+    margin-left: 138px;
 }
-
-.item-one > small:nth-of-type(2),
-.item-two > small:nth-of-type(2),
-.item-three > small:nth-of-type(2),
-.item-four > small:nth-of-type(2),
-.item-five > small:nth-of-type(2),
-.item-six > small:nth-of-type(2),
-.item-seven > small:nth-of-type(2)
-{
-    position: absolute;
-    top: 2px;
-    left: 400px;
+.items-container > div > span:nth-of-type(2){
+    margin-left: 325px;
 }
-
-.item-one > small:nth-of-type(3),
-.item-two > small:nth-of-type(3),
-.item-three > small:nth-of-type(3),
-.item-four > small:nth-of-type(3),
-.item-five > small:nth-of-type(3),
-.item-six > small:nth-of-type(3),
-.item-seven > small:nth-of-type(3){
-    position: absolute;
-    top: 2px;
-    left: 500px;
+.items-container > div > span:nth-of-type(3){
+    margin-left: 72px;
+}
+.items-container > div > span:nth-of-type(4){
+    margin-left: 98px;
 }

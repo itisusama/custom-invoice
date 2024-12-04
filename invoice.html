@@ -14,14 +14,37 @@
     <div class="text-container" id="invoiceContainer"></div>
 
     <!-- Items Container -->
-     <div class="items-container"></div>
-
+     <div class="items-container">
+        <div class="item-one" id="item-one"></div>
+        <div class="item-two" id="item-two"></div>
+        <div class="item-three" id="item-three"></div>
+        <div class="item-four"></div>
+        <div class="item-five"></div>
+        <div class="item-six"></div>
+        <div class="item-seven"></div>
+        <div class="grand-total">10000</div>
+     </div>
      <script>
         // Retrieve data from sessionStorage
         const booker = sessionStorage.getItem("booker");
         const shop = sessionStorage.getItem("shop");
         const phone = sessionStorage.getItem("phone");
         const date = sessionStorage.getItem("date");
+
+        // Items data
+        const itemName1 = sessionStorage.getItem("item_name1");
+        const itemQuantity1 = sessionStorage.getItem("item_quantity1");
+        const itemPrice1 = sessionStorage.getItem("unit_price1");
+
+        // Items data
+        const itemName2 = sessionStorage.getItem("item_name2");
+        const itemQuantity2 = sessionStorage.getItem("item_quantity2");
+        const itemPrice2 = sessionStorage.getItem("unit_price2");
+
+        // Items data
+        const itemName3 = sessionStorage.getItem("item_name3");
+        const itemQuantity3 = sessionStorage.getItem("item_quantity3");
+        const itemPrice3 = sessionStorage.getItem("unit_price3");
 
         // Fill the invoice container with the data
         const textContainerClassFillData = `
@@ -31,8 +54,32 @@
             <small class="invoice-date">${date}</small>
         `;
 
+        const itemOneData = `
+            <span class="item-name">${itemName1}</span>
+            <span class="item-quantity">${itemQuantity1}</span>
+            <span class="unit-price">${itemPrice1}</span>
+            <span class="total-price">${itemPrice1*itemQuantity1}</span>
+        `;
+        
+        const itemTwoData = `
+            <span class="item-name">${itemName2}</span>
+            <span class="item-quantity">${itemQuantity2}</span>
+            <span class="unit-price">${itemPrice2}</span>
+            <span class="total-price">${itemPrice2*itemQuantity2}</span>
+        `;
+
+        const itemThreeData = `
+            <span class="item-name">${itemName3}</span>
+            <span class="item-quantity">${itemQuantity3}</span>
+            <span class="unit-price">${itemPrice3}</span>
+            <span class="total-price">${itemPrice3*itemQuantity3}</span>
+        `;
+
         // Inject the filled data into the invoice container
         document.getElementById("invoiceContainer").innerHTML = textContainerClassFillData;
+        document.getElementById("item-one").innerHTML = itemOneData;
+        document.getElementById("item-two").innerHTML = itemTwoData;
+        document.getElementById("item-three").innerHTML = itemThreeData;
     </script>
 
      <script src="assets/script/script.js"></script>
