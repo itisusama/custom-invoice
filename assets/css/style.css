@@ -49,14 +49,33 @@
 }
 
 .items-container > div > span:nth-of-type(1){
+    position: fixed;
     margin-left: 138px;
 }
 .items-container > div > span:nth-of-type(2){
-    margin-left: 325px;
+    position: fixed;
+    margin-left: 550px;
 }
 .items-container > div > span:nth-of-type(3){
-    margin-left: 72px;
+    position: fixed;
+    margin-left: 650px;
 }
 .items-container > div > span:nth-of-type(4){
-    margin-left: 98px;
+    position: fixed;
+    margin-left: 750px;
+}
+
+.print-btn{
+    position: absolute; 
+    bottom: 150px; 
+    left: 50px; 
+    padding: 5px; 
+    border: 1px solid black; 
+    border-radius: 0; 
+    background-color: white;
+}
+
+.print-btn:hover{
+    background-color: black;
+    color: white;
 }
