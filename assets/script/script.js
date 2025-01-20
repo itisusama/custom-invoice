@@ -11,7 +11,9 @@ function handleFormSubmit(event) {
     const booker = document.getElementById("booker").value;
     const shop = document.getElementById("shop").value;
     const phone = document.getElementById("phone").value;
-    const date = document.getElementById("date").value;
+    const rawDate = document.getElementById("date").value; // yyyy-mm-dd from input
+    const dateParts = rawDate.split("-"); // Split the date
+    const formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
     
         // Items data
         const itemName1 = document.getElementById("item_name1").value
@@ -50,7 +52,7 @@ const itemPrice7 = document.getElementById("unit_price7").value;
 sessionStorage.setItem("booker", booker);
 sessionStorage.setItem("shop", shop);
 sessionStorage.setItem("phone", phone);
-sessionStorage.setItem("date", date);
+sessionStorage.setItem("date", formattedDate);
 
 // Items
 sessionStorage.setItem("item_name1", itemName1);
